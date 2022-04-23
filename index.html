@@ -6,31 +6,72 @@
         <!--Bootstrap shit-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="script.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="script.css"><!--my stylesheets-->
+        <link rel="stylesheet" href="navbarcss.css">
     </head>
 
     <body>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse sticky-top">
             <div class="container-fluid">
+
                 <div class="navbar-header">
+
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
+                        <span class="icon-bar"></span>
+
                     </button>
-                    <a class="navbar-brand" href="#">Raymer Handbook</a>
+
+                    <a class="navbar-brand" href="#"><b>Raymer Handbook</b></a>
+
                 </div>
+
                 <div class="collapse navbar-collapse" id="myNavbar">
+
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">About</a></li>
+
+                        <li class="active"><a>About</a></li>
                         <li><a href="pages/guides.html">Guides</a></li>
                         <li><a href="pages/contact.html">Contact</a></li>
+
                     </ul>
+
                 </div>
+
             </div>
         </nav>
+        <div class="container-fluid text-center">
+            <div class="row content">
+                
+                <div class="col-sm-2 sidenav" id="leftside"> <!--left side columms-->
+                    <h4>Last released:</h4>
+                    <p>The very first guide will be released shortly, and when it is, you may find it here</p>
+                </div>
+
+                <div class="col-sm-8 text-left" id="middle"> <!--middle-->
+                    <H1>Welcome to the Raymer Handbook Project!</H1>
+                    <br>
+                    <h5>This is a project started by Archit3ct, NormallySilent, G3, L0m, and Pipeman, with the goal to provide 
+                        resources for new players interested in learning about this character</h5>
+                    <h5>In the <a href="pages/guides.html">Guides</a> tab, you will find all guides in both pdf form and doc form, please </h5>
+                </div>
+
+                <div class="col-sm-2 sidenav" id="rightside"> <!--right side columns-->
+                    <p>If you; spot an inaccuracy, wish to support the project, or contact 
+                        one of the current maintainer of this project. Please find us through the <a href="pages/contact.html">Contact</a> tab</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="container-fluid text-center">
+            <p>This website was made by L0m, never used bootstrap before, so this is fun, any site suggestions, feel free to <a href="pages/contact.html">contact me</a></p>
+        </footer>
+
     </body>
 </html>
