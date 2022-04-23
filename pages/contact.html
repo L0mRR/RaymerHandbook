@@ -6,31 +6,79 @@
         <!--Bootstrap shit-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="script.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="../script.css"><!--my stylesheets-->
+        <link rel="stylesheet" href="../navbarcss.css">
     </head>
 
     <body>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
+
                 <div class="navbar-header">
+
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
+                        <span class="icon-bar"></span>
+
                     </button>
-                    <a class="navbar-brand" href="#">Raymer Handbook</a>
+
+                    <a class="navbar-brand" href="#"><b>Raymer Handbook</b></a>
+
                 </div>
+
                 <div class="collapse navbar-collapse" id="myNavbar">
+
                     <ul class="nav navbar-nav">
+
                         <li><a href="../index.html">About</a></li>
                         <li><a href="guides.html">Guides</a></li>
-                        <li class="active"><a href="#">Contact</a></li>
+                        <li class="active"><a>Contact</a></li>
+
                     </ul>
+
                 </div>
+
             </div>
         </nav>
+        <div class="container-fluid text-center">
+            <div class="row content">
+                
+                <div class="col-sm-2 sidenav" id="leftside"> <!--left side columms-->
+                    <h4>Last released:</h4>
+                    <p>The very first guide will be released shortly, and when it is, you may find it here</p>
+                </div>
+
+                <div class="col-sm-8 text-left" id="middle"> <!--middle-->
+                    <H1>Contact</H1>
+                    <br>
+                    <p>Archit3ct</p>
+                    <ul><li>Discord - Archit3ct#7475</li></ul>
+                    <p>NormallySilent</p>
+                    <ul><li>Discord - NormallySilent#0902</li></ul>
+                    <p>G3</p>
+                    <ul><li>Discord - G3#4773</li></ul>
+                    <p>L0m</p>
+                    <ul><li>Discord - L0m#8685</li><li>Email - L0mIWP@gmail.com</li></ul>
+                    <p>Pipeman</p>
+                    <ul><li>Discord - PipeMaster#3917</li></ul>
+                </div>
+
+                <div class="col-sm-2 sidenav" id="rightside"> <!--right side columns-->
+                    <p>If you; spot an inaccuracy, wish to support the project, or contact 
+                        one of the current maintainer of this project. Please do contact us!</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="container-fluid text-center">
+            <p>This website was made by L0m, never used bootstrap before, so this is fun, any site suggestions, feel free to contact me</p>
+        </footer>
+
     </body>
 </html>
