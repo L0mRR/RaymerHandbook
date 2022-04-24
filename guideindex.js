@@ -3,40 +3,41 @@ fetch('../resources/guides.json')
         return response.json();
     })
     .then(function (data) {
+        jsonData = data;
         appendData(data);
     })
     .catch(function (err) {
         console.log('error: ' + err);
     });
-function appendData(data) {
 
-    const cards = [
+function appendData(data) {
+    var cards = [
     document.getElementById("guide1"), 
     document.getElementById("guide2"), 
     document.getElementById("guide3")
     ];
-    const cardTitle = [
+    var cardTitle = [
     document.getElementById("title1"), 
     document.getElementById("title2"), 
     document.getElementById("title3")    
     ];
-    const cardBody = [
+    var cardBody = [
         document.getElementById("body1"), 
         document.getElementById("body2"), 
         document.getElementById("body3")    
     ];
-    const cardPDF = [
+    var cardPDF = [
         document.getElementById("pdf1"), 
         document.getElementById("pdf2"), 
         document.getElementById("pdf3")    
     ];
-    const cardDOC = [
+    var cardDOC = [
         document.getElementById("doc1"), 
         document.getElementById("doc2"), 
         document.getElementById("doc3")    
     ];
 
-    const highest = getHighest(data);
+    var highest = getHighest(data);
 
     for (var i = 0; i < data.length; i++) {
         if (highest.includes(data[i].edition)){
@@ -56,11 +57,25 @@ function appendData(data) {
         cards[i].style.display = 'none';
     }
 }
+
 function getHighest(data) {
-    const editionNumbers = [];
+    var editionNumbers = [];
     for (var i = 0; i < data.length; i++) {
         editionNumbers[i] = data[i].edition;
     }
     editionNumbers.sort(function(a, b) { return b - a;});
     return [editionNumbers[0],editionNumbers[1],editionNumbers[2]]
+}
+
+function archive() {
+    var section = document.getElementById("guides");
+    section.innerHTML = ""
+    for (var i = 0; i < jsonData.length; i++) {
+        var p = document.createElement("p")
+        p.innerHTML = "<strong>Edition Number:</strong> " + jsonData[i].edition + " <strong>Released:</strong> " + jsonData[i].Date + " <strong>Patch:</strong> " + jsonData[i].PatchNumber + "     <a href=" + jsonData[i].pdf + ">PDF</a> <a href=" + jsonData[i].doc + ">DOC</a>";
+        section.appendChild(p);
+    }
+    document.getElementById("seeall").style.display = "None";
+    document.getElementById("see3").style.display = "block";
+
 }
