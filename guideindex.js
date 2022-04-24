@@ -42,7 +42,7 @@ function appendData(data) {
         if (highest.includes(data[i].edition)){
             cardTitle[0].innerHTML = "Raymer Handbook Edition " + data[i].edition;
             cardBody[0].innerHTML = "Patch " + data[i].PatchNumber + " <br>Guide Released " + data[i].Date;
-            cardPDF[0].setAttribute('href', data[i].pdf);
+            cardPDF[0].setAttribute('href', "../resources/" + data[i].pdf);
             cardDOC[0].setAttribute('href', data[i].doc);
             cards[0].style.display = 'block';
             cardTitle.shift();
